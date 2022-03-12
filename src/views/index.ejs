@@ -1,0 +1,17 @@
+<%- include('./partials/head.ejs')%>
+<body>
+    <%- include('./partials/navbar.ejs')%>
+    <div class="content">
+        <% const message = 'full stack developer' %>
+        <h1>Hello, <%= message %></h1>
+
+        <% if(users.length > 0) { %>
+            <% users.forEach(user => { %>
+                <h3><%= user.firstName %> <%= user.lastName %></h3>
+                <p><%= user.email %></p>
+            <% }) %>
+        <% } %>
+    </div>
+    
+</body>
+</html>
